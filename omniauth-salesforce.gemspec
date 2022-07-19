@@ -8,9 +8,22 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/diasluan/omniauth-salesforce-ruby'
 
   gem.executables   = `git ls-files -- bin/*`.split('\n').map { |f| File.basename(f) }
-  gem.files         = `git ls-files`.split('\n')
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split('\n')
-  gem.name          = 'omniauth-salesforce-ruby'
+  gem.files         = [".gitignore",
+".rspec",
+".rvmrc",
+"Gemfile",
+"Guardfile",
+"LICENSE.md",
+"README.md",
+"Rakefile",
+"lib/omniauth-salesforce.rb",
+"lib/omniauth-salesforce/version.rb",
+"lib/omniauth/strategies/salesforce.rb",
+"omniauth-salesforce.gemspec",
+"spec/omniauth/strategies/salesforce_spec.rb",
+"spec/spec_helper.rb"]
+  gem.test_files    = ["spec/omniauth/strategies/salesforce_spec.rb","spec/spec_helper.rb"]
+  gem.name          = 'omniauth-salesforce'
   gem.require_paths = ['lib']
   gem.version       = OmniAuth::Salesforce::VERSION
   gem.license       = 'MIT'
